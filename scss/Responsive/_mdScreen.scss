@@ -1,0 +1,218 @@
+#navbar {
+    .nav-item .nav-link {
+        a {
+            @media screen and (max-width: 992px) {
+                padding: $pd-1 $pd-1;
+            }
+        }
+        a:first-child {
+            @media screen and (max-width: 992px) {
+                padding: 0;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            padding: $pd-2;
+        }
+    }
+}
+#search-area {
+    @media screen and (max-width: 992px) {
+        padding: $pd-1;
+    }
+    input {
+        @media screen and (max-width: 992px) {
+            width: 80%;
+        }
+    }
+    #swiper-slider {
+        @media screen and (max-width: 991.98px) {
+            height: 600px;
+        }
+
+        .swiper {
+            @media screen and (max-width: 991.98px) {
+                height: 400px;
+            }
+            .swiper-wrapper {
+                @media screen and (max-width: 991.98px) {
+                    height: 90%;
+                }
+            }
+        }
+    }
+}
+.intro {
+    .intro__container {
+        .intro-right {
+            @media screen and (max-width: 991.98px) {
+                background-image: url("../img/intro-2-xs.jpg");
+            }
+            .intro-right-content {
+                @media screen and (max-width: 991.98px) {
+                    width: 80%;
+                    left: 10%;
+                }
+            }
+        }
+    }
+}
+#our-vehicles {
+    h1 {
+        @media screen and (max-width: 991.98px) {
+            font-size: $fs-5;
+        }
+    }
+    .carousel-inner {
+        @media screen and (max-width: 991.98px) {
+            margin-top: 0px;
+        }
+    }
+    .carousel-caption--config {
+        @media screen and (max-width: 991.98px) {
+            width: 35%;
+            left: 7%;
+            text-align: left;
+            bottom: unset;
+            top: 10%;
+            font-size: $fs-1 - 0.2;
+        }
+        .carousel-caption-detail {
+            @media screen and (max-width: 991.98px) {
+                margin-top: $mg-1;
+            }
+            .carousel-detail-content {
+                h2 {
+                    @media screen and (max-width: 991.98px) {
+                        font-size: $fs-2;
+                    }
+                }
+                p {
+                    @media screen and (max-width: 991.98px) {
+                        font-size: $fs-1 - 0.2;
+                    }
+                }
+            }
+        }
+    }
+    .carousel-caption-footer {
+        @media screen and (max-width: 991.98px) {
+            width: 50%;
+            border: none;
+            bottom: 2%;
+            justify-content: center;
+        }
+    }
+    .carousel-indicators-config {
+        @media screen and (max-width: 991.98px) {
+            width: 100% !important;
+        }
+    }
+    .carousel-control-prev {
+        @media screen and (max-width: 991.98px) {
+            left: 0.5rem;
+        }
+        i {
+            @media screen and (max-width: 991.98px) {
+                font-size: $fs-4;
+                padding: $pd-2;
+            }
+        }
+    }
+    .carousel-control-next {
+        @media screen and (max-width: 991.98px) {
+            right: 0.5rem;
+        }
+        i {
+            @media screen and (max-width: 991.98px) {
+                font-size: $fs-4;
+                padding: $pd-2;
+            }
+        }
+    }
+}
+#search-field {
+    @media screen and (max-width: 991.98px) {
+        flex-wrap: wrap;
+        padding: 0;
+        div {
+            padding: $pd-0 $pd-1;
+            width: 70%;
+            // border-right: none;
+            // border-top: $bd-2;
+
+            input,
+            i {
+                font-size: $fs-1;
+            }
+            input::placeholder {
+                font-size: $fs-2;
+            }
+            input {
+                width: 65%;
+            }
+            .btn-search {
+                border-color: $color-blue-100;
+                border-radius: 40px;
+                color: $color-blue-200;
+                &:hover {
+                    background-color: $color-blue-100;
+                    color: white;
+                }
+            }
+        }
+        p {
+            // padding: $pd-2;
+            text-align: center;
+        }
+    }
+}
+#footer {
+    @media screen and (max-width: 991.98px) {
+        .footer-detail {
+            width: 25%;
+        }
+    }
+}
+#copy-right {
+    @media screen and (max-width: 991.98px) {
+        .copy-right-left {
+            p {
+                font-size: $fs-1 - 0.2;
+            }
+            ul {
+                justify-content: flex-start;
+                li {
+                    padding: 0 $pd-1;
+                    a {
+                        font-size: $fs-1 - 0.2;
+                    }
+                }
+            }
+        }
+
+        .copy-right-right {
+            ul {
+                justify-content: flex-end;
+                li {
+                    padding: 0 $pd-1;
+                    a {
+                        font-size: $fs-1 - 0.2;
+                    }
+                }
+                li:first-child {
+                    padding-left: 0;
+                }
+                li:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+        .logo-footer {
+           img {
+               height: 30px;
+               
+           }
+           
+        }
+    }
+}

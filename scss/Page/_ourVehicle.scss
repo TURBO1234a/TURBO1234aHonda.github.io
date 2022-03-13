@@ -1,0 +1,283 @@
+#our-vehicles {
+    border: 1px solid transparent;
+    background-color: $color-grey;
+    .carousel {
+        height: 600px;
+    }
+    .carousel-inner,
+    .carousel-item {
+        height: 95%;
+    }
+    color: $color-blue-200;
+
+    margin: $mg-2 0 $mg-4;
+    .carousel-control-prev,
+    .carousel-control-next {
+        i {
+            font-size: $fs-5;
+            top: 45%;
+            background-color: $color-blue-overlay;
+            padding: $pd-3 $pd-3;
+            border-radius: 0.9rem;
+        }
+    }
+    .carousel-indicators-config {
+        margin-bottom: $mg-1;
+        li {
+            color: $color-dark-blue-200;
+            font-weight: $fw-bold;
+            font-size: $fs-1;
+            padding: $pd-0 $pd-1;
+            cursor: pointer;
+            border-radius: 0.5rem;
+        }
+        li.active {
+            color: white;
+            background-color: $color-blue-100;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            &::after {
+                content: "";
+                border-top: 15px solid $color-white;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                position: absolute;
+                bottom: -15px -$mg-1;
+
+                z-index: 9;
+            }
+        }
+    }
+    .carousel-caption--config {
+        width: 30%;
+        position: absolute;
+        top: 8%;
+        left: 6%;
+        color: $color-white;
+        font-size: $fs-1;
+        > p {
+            font-weight: $fw-bold;
+            span {
+                font-weight: $fw-normal;
+            }
+        }
+        img {
+            width: 60%;
+            transform: translateX(($pd-1) * (-1));
+        }
+        > p:last-of-type {
+            font-weight: $fw-300;
+            margin-bottom: $mg-2;
+        }
+        .carousel-caption-detail {
+            margin-bottom: $mg-1;
+            .carousel-detail-content {
+                h2 {
+                    font-weight: $fw-300;
+                    font-size: $fs-5;
+                }
+                p {
+                    font-size: $fs-1;
+                    font-weight: $fw-bold;
+                }
+            }
+        }
+    }
+    .carousel-caption-footer {
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top: 0.15rem solid #a8a7a7;
+        a {
+            font-size: $fs-1;
+            font-weight: $fw-bold;
+            color: white;
+        }
+    }
+    .carousel-indicators-xs {
+        width: 60%;
+        margin: auto;
+        background-color: $color-white;
+        border: $bd-3;
+
+        h1 {
+            font-size: $fs-1 - 0.2;
+            margin: 0;
+            color: $color-blue-100;
+            font-weight: $fw-300;
+            padding: $pd-2;
+            padding-left: 0;
+            span {
+                font-weight: $fw-bold;
+                color: $color-dark-blue-200;
+            }
+        }
+        i {
+            transition: 1s;
+            font-size: $fs-5;
+            color: $color-blue-100;
+            cursor: pointer;
+        }
+        ol li {
+            color: $color-dark-blue-200;
+            font-weight: $fw-bold;
+            font-size: $fs-1;
+            padding: $pd-1 $pd-1;
+            padding-left: 35px;
+            cursor: pointer;
+        }
+        ol {
+            height: 0px;
+            overflow: hidden;
+            transition: 1s;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border-top: $bd-3;
+        }
+    }
+    .function-container {
+        padding: 0 $pd-7 + 1.5;
+        margin: $mg-5 0;
+    }
+    .function {
+        
+        position: relative;
+        height: 350px;
+        box-shadow: $box-shadow-2;
+        transition: .5s;
+        // background-clip: content-box;
+        &:hover {
+            transform: translateY(-10px);
+            button {
+                color: $color-blue-200;
+                background-color: white;
+            }
+        }
+        h3 {
+            font-size: $fs-2;
+            @include text($fw-bold, $mg-1);
+            color: $color-dark-blue-200;
+        }
+        p {
+            font-size: $fs-1;
+            @include text($fw-300, $mg-2);
+            color: $color-dark-blue-100;
+        }
+        div {
+            margin: 0px auto;
+            position: absolute;
+            text-align: center;
+            top: 40%;
+            padding: 0 10%;
+            width: 100%;
+            @media screen and (min-width: 768.1px) and (max-width: 1055px) {
+                top: 30%;
+                padding: 0;
+            }
+        }
+    }
+    .intro-left-1 {
+        background-image: url("../img/intro-3.jpg");
+        margin: 0 0 $mg-2 0;
+    }
+    .intro-right-1 {
+        margin-top: 0px;
+        background-image: url("../img/intro-4.jpg");
+    }
+    #discover {
+        padding: 0 $pd-7 + 1.5;
+        .discover-title {
+            h1 {
+                font-size: $fs-3;
+                margin-bottom: $mg-2;
+            }
+            span {
+                color: $color-dark-blue-100;
+                font-weight: $fw-300;
+                font-size: $fs-1;
+            }
+        }
+        .discover-item {
+            height: 450px;
+            position: relative;
+            margin-top: $mg-1;
+            box-shadow: $box-shadow-2;
+
+            .discover-item-content {
+                text-align: center;
+                position: absolute;
+                left: 0;
+                bottom: 8%;
+                h2,
+                a {
+                    @include text($fw-bold, $mg-1);
+                    font-size: $fs-2;
+                    color: $color-dark-blue-200;
+                }
+                p {
+                    @include text($fw-300, $mg-1);
+                    font-size: $fs-1;
+                    padding: 0 $pd-2;
+                }
+                a {
+                    color: $color-blue-200;
+                    font-size: $fs-1;
+                }
+            }
+        }
+        .discover-item-6 {
+            color: $color-blue-200;
+            background-color: $color-white;
+            
+            > i {
+                font-size: $fs-4;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+            .discover-item-twitter {
+                position: absolute;
+                left: 5%;
+                top: 20%;
+                a {
+                    color: $color-blue-200;
+                }
+                .discover-twitter-logo {
+                    img {
+                        border-radius: 0.5rem;
+                        margin-right: $mg-0;
+                        height: 4rem;
+                    }
+                    p {
+                        font-size: $fs-1;
+                        a:first-child {
+                            font-weight: $fw-bold;
+                        }
+                    }
+                }
+                > p {
+                    font-size: $fs-1;
+                    color: $color-dark-blue-200;
+                }
+                .discover-twitter-interaction {
+                    color: $color-blue-200;
+                    span {
+                        margin-right: $mg-1;
+                    }
+                }
+            }
+        }
+        button {
+            margin: $mg-3 0;
+        }
+    }
+}
+.d-fluid {
+    max-width: 100%;
+}
+.pd-col {
+    padding: $pd-0;
+}

@@ -1,0 +1,61 @@
+@mixin button($border, $bg, $color, $pd, $bg-hover, $color-hover) {
+    border: 2px solid $border;
+    border-radius: 40px;
+    background-color: $bg;
+    color: $color;
+    font-weight: $fw-bold;
+    padding: $pd;
+    font-size: $fs-1;
+    cursor: pointer;
+    &:hover {
+        background-color: $bg-hover;
+        color: $color-hover;
+    }
+}
+.btn-vehicles {
+    @include button($color-blue-200, $color-blue-200, $color-white, $pd-0 $pd-4, $color-white, $color-blue-100);
+    margin-right: $mg-0;
+   @media screen and (max-width: 839px) {
+       margin-bottom: 10px;
+   }
+}
+.btn-vehicles-active {
+    @include button($color-blue-200, $color-white, $color-blue-100, $pd-0 $pd-4, $color-blue-200, $color-white);
+}
+.btn-search {
+    @include button($color-blue-200, transparent, $color-blue-100, $pd-0 $pd-4, $color-blue-200, $color-white);
+    margin-top: $mg-1 * (-1);
+    @media screen and (max-width: 767.98px) {
+        @include button($color-white, transparent, $color-white, $pd-0 $pd-4, $color-white, $color-blue-200);
+        margin-top: 0px;
+        
+        border-radius: 5px;
+    }
+}
+.btn-carousel {
+    @include button($color-orange,$color-orange ,$color-white ,$pd-0 $pd-1,$color-white , $color-orange);
+    position: absolute;
+}
+.btn-go {
+    @include button($color-blue-200,$color-blue-200 ,$color-white ,$pd-0 $pd-1 ,transparent,$color-blue-100)
+}
+.btn-go-orange {
+    @include button($color-orange,$color-orange ,$color-white ,$pd-0 $pd-1 ,$color-white,$color-orange)
+    
+}
+.btn-build {
+    @include button($color-white,transparent ,$color-white ,$pd-0 $pd-1 ,$color-white,$color-blue-100)
+
+}
+.btn-caption {
+    padding: $pd-0 $pd-2;
+    @media screen and (max-width:575.98px) {
+        font-size: $fs-1 - 0.2;
+        padding: $pd-0 $pd-2;
+    }
+}
+.btn-carousel1 {
+    @include button($color-orange,$color-orange ,$color-white ,$pd-0 $pd-1,$color-white , $color-orange);
+
+}
+

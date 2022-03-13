@@ -1,0 +1,81 @@
+#search-area {
+    @media screen and (max-width: 1199.98px) {
+        padding: $pd-1 $pd-2;
+    }
+    input {
+        @media screen and (max-width: 1199.98px) {
+            width: 80%;
+        }
+        @media screen and (min-width: 1199.98px) and (max-width: 1300px) {
+            width: 80%;
+        }
+    }
+}
+#vehicles {
+    #vehicles__content {
+        .vehicles-nav {
+            ul {
+                li {
+                    @media screen and (max-width: 1149.98px) {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#search-field {
+    @media screen and (max-width:1352px) {
+        div {
+            width: 85%;
+            input {
+                width: 75%;
+            }
+        }
+    }
+}
+#copy-right {
+    @media screen and (max-width: 1199.98px) {
+        .copy-right-left {
+            p {
+                font-size: $fs-1 - 0.2;
+            }
+            ul {
+                justify-content: flex-start;
+                li {
+                    padding: 0 $pd-1;
+                    a {
+                        font-size: $fs-1 - 0.2;
+                    }
+                }
+            }
+        }
+
+        .copy-right-right {
+            ul {
+                justify-content: flex-end;
+                li {
+                    padding: 0 $pd-1;
+                    a {
+                        font-size: $fs-1 - 0.2;
+                    }
+                }
+                li:first-child {
+                    padding-left: 0;
+                }
+                li:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+        .logo-footer {
+           img {
+               height: 40px;
+               
+           }
+           
+        }
+    }
+}
+

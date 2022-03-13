@@ -1,0 +1,193 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50px;
+    z-index: 10;
+}
+.navbar {
+    padding: 0;
+    height: 100%;
+}
+#navbar {
+    .navbar-nav {
+        .nav-item {
+            a {
+                &.active::after {
+                    transform: translateY(-10%);
+                }
+            }
+        }
+    }
+}
+#navbar {
+    height: 100%;
+    background-color: $color-blue-100;
+    li {
+        border-right: $bd-1;
+        border-left: $bd-1;
+    }
+    a {
+        position: relative;
+        z-index: 100;
+        height: 100%;
+        color: $color-white;
+        padding: 0 $pd-2;
+
+        display: flex;
+        align-items: center;
+        font-size: $fs-1;
+        &:hover {
+            text-decoration: none;
+            color: $color-blue-200;
+        }
+        i {
+            padding-top: 2px;
+        }
+        &.active {
+            background-color: $color-white;
+            color: $color-blue-100;
+            border-radius: 10px;
+        }
+    }
+    a:first-child {
+        padding: 0 $pd-4;
+    }
+
+    height: 100%;
+    #navbar-menu {
+        height: 100%;
+        ul {
+            height: 100%;
+            li {
+                padding: 0;
+            }
+        }
+    }
+
+    .discover-menu {
+        left: unset;
+        right: -30%;
+        width: 40rem;
+        top: 145%;
+        padding: $pd-2;
+        border: none;
+        box-shadow: $box-shadow;
+        &::before {
+            @include arrow(unset, 15%);
+        }
+        .dropdown-item {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+        .dropdown-menu-detail {
+            .dropdown-detail-left {
+                white-space: normal;
+                li {
+                    border: none;
+                }
+            }
+            .dropdown-detail-right {
+                padding-left: $pd-3;
+                li {
+                    border: none;
+                }
+            }
+            display: flex;
+            h3 {
+                margin-bottom: $mg-1;
+                color: $color-dark-blue-200;
+                font-weight: $fw-bold;
+            }
+            > div {
+                width: 50%;
+            }
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            ul li {
+                margin-bottom: $mg-1 - 5;
+            }
+            ul li a {
+                color: $color-blue-200;
+                border: none;
+                padding: 0;
+                font-weight: $fw-normal;
+                font-size: $fs-1;
+            }
+        }
+        .dropdown-menu-social {
+            display: flex;
+            justify-content: space-around;
+            margin-top: $mg-2;
+            i {
+                @include social-icon;
+            }
+        }
+    }
+    #vehicles-link {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.no-border {
+    border: 0 !important;
+}
+#navbar-menu {
+    .navbar-nav {
+        .nav-item {
+            > a::after {
+                position: absolute;
+                content: "";
+                display: inline-block;
+                background-color: white;
+                pointer-events: none;
+                z-index: -1;
+                top: -40%;
+                left: 0;
+                height: 210%;
+                width: 100%;
+                transform: translateY(-150%);
+                transition: 0.3s;
+            }
+            a:hover::after {
+                transform: translateY(-10%);
+            }
+            &.active a {
+                color: $color-blue-200;
+                &::after {
+                    transform: translateY(-10%);
+                }
+            }
+        }
+    }
+}
+.navbar {
+    > a:first-child {
+        &::after {
+            display: none;
+        }
+    }
+    > a::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        background-color: white;
+        pointer-events: none;
+        z-index: -1;
+        top: -40%;
+        left: 0;
+        height: 210%;
+        width: 100%;
+        transform: translateY(-150%);
+        transition: 0.3s;
+    }
+    a:hover::after {
+        transform: translateY(-10%);
+    }
+}
